@@ -5,3 +5,5 @@ title: "Holy cow!"
 ### I have a webpage!
 
 The solution of problem 1 is [here](instacart_dashboard.html)
+
+The solution of problem 2 is [here](https://liuweijie2132.shinyapps.io/problem_2/)
