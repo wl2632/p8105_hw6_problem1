@@ -18,4 +18,30 @@ instacart = read_csv("./data/instacart_train_data.csv.zip")
 
 ```
 
+## barplot
+```{r}
+instacart %>%
+  count(department) %>%
+  mutate(department = fct_reorder(department, n)) %>%
+  plot_ly(x = ~department, y = ~n, color = ~department, type = "bar")
 
+```
+
+## boxplot
+```{r}
+instacart %>%
+  mutate(departnemt = fct_reorder(department, order_hour_of_day)) %>%
+  plot_ly(x = ~department, y = ~order_hour_of_day, color = ~department, type = "box")
+
+```
+
+## scatterplot
+```{r}
+instacart %>%
+  filter(order_dow == "4") %>%
+  filter(user_id < 10000) %>%
+  plot_ly(x = ~department, y = ~order_hour_of_day, color = ~department, type = "scatter", alpha = 0.1)
+  
+
+
+```
